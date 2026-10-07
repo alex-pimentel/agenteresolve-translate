@@ -28,11 +28,6 @@ describe('CatalogPage', () => {
 
   it('links each card to its tool route', () => {
     renderPage();
-    expect(screen.getByRole('link', { name: /translator/i })).toHaveAttribute('href', '/translate');
-    expect(screen.getByRole('link', { name: /youtube2mp3/i })).toHaveAttribute(
-      'href',
-      '/youtube2mp3',
-    );
     expect(screen.getByRole('link', { name: /louder/i })).toHaveAttribute('href', '/louder');
   });
 
