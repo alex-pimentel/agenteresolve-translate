@@ -15,6 +15,7 @@ function renderPage() {
 describe('CatalogPage', () => {
   it('renders the heading and all 17 tool cards', () => {
     renderPage();
+    expect(screen.getByRole('link', { name: /translator/i })).toHaveAttribute('href', '/translate');
     expect(screen.getByRole('heading', { name: 'Ferramentas de IA' })).toBeInTheDocument();
     expect(screen.getAllByTestId('tool-card')).toHaveLength(17);
   });
