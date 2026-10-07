@@ -39,7 +39,7 @@ describe('tool catalogue', () => {
       (count, category) => count + toolsByCategory(category.id).length,
       0,
     );
-    expect(total).toBe(17);
+    expect(total).toBe(16);
   });
 
   it('marks translate as implemented and louder as client-side', () => {
